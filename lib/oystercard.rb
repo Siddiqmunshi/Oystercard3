@@ -12,6 +12,9 @@ if @balance > MAXIMUM_BALANCE
   raise "Maximum balance of #{MAXIMUM_BALANCE} exceeded"
 end 
 
+def deduct(amount)
+@balance -= amount
+end
 
 end
 
