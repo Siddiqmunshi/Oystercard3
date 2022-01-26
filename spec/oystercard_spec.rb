@@ -5,7 +5,7 @@ describe Oystercard do
   it "has a balance of zero" do
     expect(subject.balance).to eq(0)
   end
-describe '#top_up' do
+# describe '#top_up' do
     it { is_expected.to respond_to(:top_up).with(1).argument }
 
     it "can top up balance" do
@@ -23,7 +23,21 @@ describe '#top_up' do
       expect{subject.deduct 1}.to change{subject.balance}.by -1
     end 
 
+    it "can tell if user is on journey" do
+      expect(subject.in_journey?).to eq false
+    end
+
+    it "can touch in" do
+      expect(subject.touch_in).to eq true
+    end
+
+    it "can touch out" do
+      expect(subject.touch_out).to eq false
+    end
+
+    
+
 
 end
-end
+# end
 
